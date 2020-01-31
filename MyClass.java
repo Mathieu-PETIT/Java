@@ -53,30 +53,26 @@ public class MyClass {
 		public static int[] triCroissant(int[] tab) 
 		{
 		    int longueur = tab.length;
-		    int tampon = 0;
-		    boolean permut;
+		    int temp = 0;
+		    boolean change;
 		
 		    do {
-		        // hypothèse : le tableau est trié
-		        permut = false;
+		        change = false;
 		
-		        for (int i = 0; i < longueur - 1; i++) 
+		        for (int i = 0; i < longueur-1; i++) 
 		        {
-		            // Teste si 2 éléments successifs sont dans le bon ordre ou non
 		            if (tab[i] > tab[i + 1]) 
 		            {
-		                // s'ils ne le sont pas, on échange leurs positions
-		                tampon = tab[i];
+		                temp = tab[i];
 		                tab[i] = tab[i + 1];
-		                tab[i + 1] = tampon;
-		                permut = true;
+		                tab[i + 1] = temp;
+		                change = true;
 		            }
 		        }
 		    } 
-		    while (permut);
+		    while (change);
 		    {
 		    	return tab;
 		    }	
 		}
 }		    
-
