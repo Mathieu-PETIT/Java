@@ -1,4 +1,7 @@
 package truc;
+import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class MyClass {
 	
@@ -10,11 +13,12 @@ public class MyClass {
 	    	// Ecrire un code qui cherche le minimum 
 	     
 	    	int[] tab={0,6,8,1,5,7,2,3};
+	    	int longueur = tab.length;
 	    	min(tab);
 	    	int [] trier = triCroissant(tab);
 	    	System.out.println("Voici la version triée : ");
 	    	
-	    	for (int i=0; i<=7;i++) {
+	    	for (int i=0; i<=longueur-1;i++) {
 	    		System.out.println(trier[i]);
 	    	}
 	    }
@@ -22,8 +26,8 @@ public class MyClass {
 	    
 	    public static void min(int[] tableau){
 	    	int min = tableau[0];
-	    	System.out.println("Le minimum est : "+min);
-	    	for(int i=1; i <= 7; i++){
+	    	int longueur = tableau.length;
+	    	for(int i=1; i <= longueur-1; i++){
 	    		System.out.println("Position : " + tableau[i]);
 	    		if (tableau[i]< min) {
 	    			min=tableau[i];
@@ -89,4 +93,3 @@ public class MyClass {
 		    }	
 		}
 }		    
-
