@@ -1,7 +1,4 @@
 package truc;
-import java.util.Scanner;
-import java.util.ArrayList;
-
 
 public class MyClass {
 	
@@ -12,25 +9,31 @@ public class MyClass {
 	        // Ecrire du code permetta,t de déterminer si cherche existe dans le tableau
 	    	// Ecrire un code qui cherche le minimum 
 	     
-	    int[] tab={0,6,8,1,5,7,2,3};
-	    min(tab);
+	    	int[] tab={0,6,8,1,5,7,2,3};
+	    	min(tab);
+	    	int [] trier = triCroissant(tab);
+	    	System.out.println("Voici la version triée : ");
+	    	
+	    	for (int i=0; i<=7;i++) {
+	    		System.out.println(trier[i]);
+	    	}
 	    }
 	    
 	    
 	    public static void min(int[] tableau){
-	    int min = tableau[0];
-	    System.out.println("Le minimum est : "+min);
-	    for(int i=1; i <= 7; i++){
-	    	System.out.println("Position : " + tableau[i]);
-	    	if (tableau[i]< min) {
-	    		min=tableau[i];
-	    	}
+	    	int min = tableau[0];
+	    	System.out.println("Le minimum est : "+min);
+	    	for(int i=1; i <= 7; i++){
+	    		System.out.println("Position : " + tableau[i]);
+	    		if (tableau[i]< min) {
+	    			min=tableau[i];
+	    		}
 	    
-	    	if (test(tableau[i])==true) {
-	    		System.out.println("Elément trouvé dans l'index");
+	    		if (test(tableau[i])==true) {
+	    			System.out.println("Elément trouvé dans l'index");
+	    		}
 	    	}
-	    }
-	    System.out.println("Le minimum est : " + min);
+	    	System.out.println("Le minimum est : " + min);
 	    }
 	    
 	    
@@ -44,5 +47,46 @@ public class MyClass {
 	    	}
 	    	return result;
 	    }	
-}
+	    
+	    
+	    //public static void tri(int [] tab) {
+	    //	int min=tab[0];
+	    //	int result[]=
+	    //	for (int i=1; 1 <=7;i++) {
+	    //		if (tab[i]<min) {
+	    //			
+	    //		}
+	    //	}
+	    //}
+
+
+		public static int[] triCroissant(int[] tab) 
+		{
+		    int longueur = tab.length;
+		    int tampon = 0;
+		    boolean permut;
+		
+		    do {
+		        // hypothèse : le tableau est trié
+		        permut = false;
+		
+		        for (int i = 0; i < longueur - 1; i++) 
+		        {
+		            // Teste si 2 éléments successifs sont dans le bon ordre ou non
+		            if (tab[i] > tab[i + 1]) 
+		            {
+		                // s'ils ne le sont pas, on échange leurs positions
+		                tampon = tab[i];
+		                tab[i] = tab[i + 1];
+		                tab[i + 1] = tampon;
+		                permut = true;
+		            }
+		        }
+		    } 
+		    while (permut);
+		    {
+		    	return tab;
+		    }	
+		}
+}		    
 
