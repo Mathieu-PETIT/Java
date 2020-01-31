@@ -1,7 +1,4 @@
 package truc;
-import java.util.Scanner;
-import java.util.ArrayList;
-
 
 public class MyClass {
 	
@@ -50,29 +47,17 @@ public class MyClass {
 	    		result=false;
 	    	}
 	    	return result;
-	    }	
-	    
-	    
-	    //public static void tri(int [] tab) {
-	    //	int min=tab[0];
-	    //	int result[]=
-	    //	for (int i=1; 1 <=7;i++) {
-	    //		if (tab[i]<min) {
-	    //			
-	    //		}
-	    //	}
-	    //}
+	    }
 
-
-		public static int[] triCroissant(int[] tab) 
-		{
-		    int longueur = tab.length;
-		    int tampon = 0;
-		    boolean permut;
+	public static int[] triCroissant(int[] tab) 
+	{
+		int longueur = tab.length;
+		int tampon = 0;
+		boolean permut;
 		
-		    do {
-		        // hypothèse : le tableau est trié
-		        permut = false;
+		do {
+		// hypothèse : le tableau est trié
+			permut = false;
 		
 		        for (int i = 0; i < longueur - 1; i++) 
 		        {
@@ -91,5 +76,5 @@ public class MyClass {
 		    {
 		    	return tab;
 		    }	
-		}
+	}
 }		    
